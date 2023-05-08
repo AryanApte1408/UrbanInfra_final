@@ -147,7 +147,7 @@ function App() {
               authProvider={authProvider}
               resources={[
                 {
-                  name: "property",
+                  name: "area",
                   list: MuiInferencer,
                 },
                 {
@@ -220,6 +220,6 @@ function App() {
 }
 
 export default App;
-
+  
 
 // meow1
