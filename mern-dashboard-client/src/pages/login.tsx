@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useLogin } from "@refinedev/core";
 import { Container, Box } from "@mui/material";
-
+import LoginPage from "./login-with-id";
 
 import { yariga } from "../assets";
 
@@ -14,6 +14,31 @@ export const Login: React.FC = () => {
     const { mutate: login } = useLogin<CredentialResponse>({
         v3LegacyAuthProviderCompatible: true,
     });
+
+    interface LoginButtonProps {
+        onClick: () => void;
+      }
+      
+      const LoginButton: React.FC<LoginButtonProps> = ({ onClick }) => {
+        return (
+          <button onClick={LoginPage}>
+            Login using Id and Password
+          </button>
+        );
+      };
+
+    interface registerbuttonProps {
+    onClick: () => void;
+    }
+    
+    const RegiserButton: React.FC<registerbuttonProps> = ({ onClick }) => {
+    return (
+        <button onClick={onClick}>
+        Register using ID and Password
+        </button>
+    );
+    };
+      
 
     const GoogleButton = (): JSX.Element => {
         const divRef = useRef<HTMLDivElement>(null);
@@ -51,6 +76,15 @@ export const Login: React.FC = () => {
         return <div ref={divRef} />;
     };
 
+const App: React.FC = () => {
+    return (
+        <div>
+        <h1>My App</h1>
+        <LoginPage />
+        </div>
+    );
+    };
+
     return (
         <Box component="div" sx={{ backgroundColor: "#FCFCFC" }}>
             <Container
@@ -77,6 +111,22 @@ export const Login: React.FC = () => {
                     <Box mt={4}>
                         <GoogleButton />
                     </Box>
+
+                    <Box mt ={4}>
+                        <LoginButton onClick={function (): void {
+                            throw new Error("Function not implemented.");
+                        } }/>
+                        
+                    </Box>
+
+
+                    <Box mt ={4}>
+                        <RegiserButton onClick={function (): void {
+                            throw new Error("Function not implemented.");
+                        } }/>
+                        
+                    </Box>
+                    
                 </Box>
             </Container>
         </Box>
