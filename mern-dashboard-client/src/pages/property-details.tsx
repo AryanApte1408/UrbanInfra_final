@@ -166,7 +166,7 @@ const PropertyDetails = () => {
                                         color="#808191"
                                         mb={0.5}
                                     >
-                                        for one day
+                                        {/* for one day */}
                                     </Typography>
                                 </Stack>
                             </Box>
@@ -251,7 +251,7 @@ const PropertyDetails = () => {
                                     fontWeight={400}
                                     color="#808191"
                                 >
-                                    North Carolina, USA
+                                    {propertyDetails.location}
                                 </Typography>
                             </Stack>
 
@@ -303,7 +303,7 @@ const PropertyDetails = () => {
                             />
                         </Stack>
                     </Stack>
-
+{/* 
                     <Stack>
                         <img
                             src="https://serpmedia.org/scigen/images/googlemaps-nyc-standard.png?crc=3787557525"
@@ -311,16 +311,16 @@ const PropertyDetails = () => {
                             height={306}
                             style={{ borderRadius: 10, objectFit: "cover" }}
                         />
-                    </Stack>
+                    </Stack> */}
 
-                    <Box>
+                    {/* <Box>
                         <CustomButton
                             title="Book Now"
                             backgroundColor="#475BE8"
                             color="#FCFCFC"
                             fullWidth
                         />
-                    </Box>
+                    </Box> */}
                 </Box>
             </Box>
         </Box>
