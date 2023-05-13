@@ -7,7 +7,6 @@ import {
     Edit,
     Phone,
     Place,
-    Star,
 } from "@mui/icons-material";
 
 import { CustomButton } from "components";
@@ -101,14 +100,6 @@ const PropertyDetails = () => {
                             >
                                 {propertyDetails.propertyType}
                             </Typography>
-                            <Box>
-                                {[1, 2, 3, 4, 5].map((item) => (
-                                    <Star
-                                        key={`star-${item}`}
-                                        sx={{ color: "#F2C94C" }}
-                                    />
-                                ))}
-                            </Box>
                         </Stack>
 
                         <Stack
