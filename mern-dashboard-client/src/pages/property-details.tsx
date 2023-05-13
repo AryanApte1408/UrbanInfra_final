@@ -166,7 +166,7 @@ const PropertyDetails = () => {
                                         color="#808191"
                                         mb={0.5}
                                     >
-                                        for one day
+                                        
                                     </Typography>
                                 </Stack>
                             </Box>
@@ -235,7 +235,7 @@ const PropertyDetails = () => {
                                     fontWeight={400}
                                     color="#808191"
                                 >
-                                    Agent
+                                    Contributor
                                 </Typography>
                             </Box>
 
@@ -245,14 +245,14 @@ const PropertyDetails = () => {
                                 alignItems="center"
                                 gap={1}
                             >
-                                <Place sx={{ color: "#808191" }} />
-                                <Typography
+                                {/* <Place sx={{ color: "#808191" }} /> */}
+                                {/* <Typography
                                     fontSize={14}
                                     fontWeight={400}
                                     color="#808191"
                                 >
                                     North Carolina, USA
-                                </Typography>
+                                </Typography> */}
                             </Stack>
 
                             <Typography
@@ -273,7 +273,7 @@ const PropertyDetails = () => {
                             flexWrap="wrap"
                             gap={2}
                         >
-                            <CustomButton
+                            {/* <CustomButton
                                 title={!isCurrentUser ? "Message" : "Edit"}
                                 backgroundColor="#475BE8"
                                 color="#FCFCFC"
@@ -288,8 +288,8 @@ const PropertyDetails = () => {
                                         );
                                     }
                                 }}
-                            />
-                            <CustomButton
+                            /> */}
+                            {/* <CustomButton
                                 title={!isCurrentUser ? "Call" : "Delete"}
                                 backgroundColor={
                                     !isCurrentUser ? "#2ED480" : "#d42e2e"
@@ -300,26 +300,26 @@ const PropertyDetails = () => {
                                 handleClick={() => {
                                     if (isCurrentUser) handleDeleteProperty();
                                 }}
-                            />
+                            /> */}
                         </Stack>
                     </Stack>
 
                     <Stack>
-                        <img
+                        {/* <img
                             src="https://serpmedia.org/scigen/images/googlemaps-nyc-standard.png?crc=3787557525"
                             width="100%"
                             height={306}
                             style={{ borderRadius: 10, objectFit: "cover" }}
-                        />
+                        /> */}
                     </Stack>
 
                     <Box>
-                        <CustomButton
+                        {/* <CustomButton
                             title="Book Now"
                             backgroundColor="#475BE8"
                             color="#FCFCFC"
                             fullWidth
-                        />
+                        /> */}
                     </Box>
                 </Box>
             </Box>

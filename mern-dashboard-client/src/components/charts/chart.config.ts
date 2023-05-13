@@ -37,7 +37,7 @@ export const TotalRevenueOptions: ApexOptions = {
         width: 4,
     },
     xaxis: {
-        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+        categories: ["Jan", "Feb", "Mar", "Apr", "May"],
     },
     yaxis: {
         title: {
