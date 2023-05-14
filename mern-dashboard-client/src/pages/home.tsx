@@ -38,7 +38,7 @@ const Home = () => {
                 />
                 <PieChart
                     title="Images scanned by user"
-                    value={6}
+                    value={1}
                     series={[1, 6]}
                     colors={["#275be8", "#c4e8ef"]}
                 />

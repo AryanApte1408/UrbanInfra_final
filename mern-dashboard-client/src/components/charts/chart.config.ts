@@ -1,12 +1,12 @@
 import { ApexOptions } from "apexcharts";
 
 export const TotalRevenueSeries = [
+    // {
+    //     name: "Last Month",
+    //     data: [183, 124, 115, 85, 143],
+    // },
     {
-        name: "Last Month",
-        data: [183, 124, 115, 85, 143],
-    },
-    {
-        name: "Running Month",
+        name: "This Month",
         data: [95, 84, 72, 44, 108],
     },
 ];
@@ -41,7 +41,7 @@ export const TotalRevenueOptions: ApexOptions = {
     },
     yaxis: {
         title: {
-            text: "$ (thousands)",
+            text: "",
         },
     },
     fill: {
@@ -51,11 +51,11 @@ export const TotalRevenueOptions: ApexOptions = {
         position: "top",
         horizontalAlign: "right",
     },
-    tooltip: {
-        y: {
-            formatter(val: number) {
-                return `$ ${val} thousands`;
-            },
-        },
-    },
+    // tooltip: {
+    //     y: {
+    //         formatter(val: number) {
+    //             return ` {val} `;
+    //         },
+    //     },
+    // },
 };
