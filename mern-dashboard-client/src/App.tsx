@@ -31,7 +31,7 @@ import { parseJwt } from "utils/parse-jwt";
 import {
     Login,
     Home,
-    Agents,
+    Contributors,
     MyProfile,
     PropertyDetails,
     AllProperties,
@@ -146,8 +146,8 @@ function App() {
                             icon: <VillaOutlined />,
                         },
                         {
-                            name: "agents",
-                            list: Agents,
+                            name: "Contributors",
+                            list: Contributors,
                             show: AgentProfile,
                             icon: <PeopleAltOutlined />,
                         },

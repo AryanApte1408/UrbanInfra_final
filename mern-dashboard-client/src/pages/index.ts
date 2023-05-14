@@ -1,5 +1,5 @@
 import AgentProfile from "./agent-profile";
-import Agents from "./agent";
+import Contributors from "./agent";
 import AllProperties from "./all-properties";
 import CreateProperty from "./create-property";
 import Home from "./home";
@@ -10,7 +10,7 @@ import EditProperty from "./edit-property";
 
 export {
     AgentProfile,
-    Agents,
+    Contributors,
     AllProperties,
     CreateProperty,
     Home,

@@ -3,10 +3,10 @@ import { Box, Typography } from "@mui/material";
 
 import { AgentCard } from "components";
 
-const Agents = () => {
+const Contributors = () => {
     const { data, isLoading, isError } = useList({ resource: "users" });
 
-    const allAgents = data?.data ?? [];
+    const allContributors = data?.data ?? [];
 
     if (isLoading) return <div>loading...</div>;
     if (isError) return <div>error...</div>;
@@ -14,7 +14,7 @@ const Agents = () => {
     return (
         <Box>
             <Typography fontSize={25} fontWeight={700} color="#11142d">
-                Agents List
+                Contributors List
             </Typography>
 
             <Box
@@ -26,7 +26,7 @@ const Agents = () => {
                     backgroundColor: "#fcfcfc",
                 }}
             >
-                {allAgents.map((agent) => (
+                {allContributors.map((agent) => (
                     <AgentCard
                         key={agent._id}
                         id={agent._id}
@@ -41,4 +41,4 @@ const Agents = () => {
     );
 };
 
-export default Agents;
+export default Contributors;
