@@ -6,8 +6,17 @@ export const TotalRevenueSeries = [
     //     data: [183, 124, 115, 85, 143],
     // },
     {
+<<<<<<< HEAD
         name: "This Month",
         data: [95, 84, 72, 44, 108],
+=======
+        name: "Last Month",
+        data: [183, 124, 115, 85, 143, 143, 96],
+    },
+    {
+        name: "Running Month",
+        data: [95, 84, 72, 44, 108, 108, 47],
+>>>>>>> 4a0808c2eb7e1f651f5454a809d892cef93c2a7f
     },
 ];
 
@@ -37,7 +46,7 @@ export const TotalRevenueOptions: ApexOptions = {
         width: 4,
     },
     xaxis: {
-        categories: ["Jan", "Feb", "Mar", "Apr", "May"],
+        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
     },
     yaxis: {
         title: {

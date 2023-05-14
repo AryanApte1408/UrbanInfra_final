@@ -5,7 +5,7 @@ import CustomButton from "./common/CustomButton";
 
 // charts
 import PieChart from "./charts/PieChart";
-// import PropertyReferrals from "./charts/PropertyReferrals";
+import PropertyReferrals from "./charts/PropertyReferrals";
 import TotalRevenue from "./charts/TotalRevenue";
 
 // agent
@@ -19,7 +19,7 @@ export {
     PropertyCard,
     CustomButton,
     PieChart,
-    // PropertyReferrals,
+    PropertyReferrals,
     TotalRevenue,
     AgentCard,
     TopAgent,

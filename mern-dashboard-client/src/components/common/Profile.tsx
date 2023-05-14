@@ -72,12 +72,12 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                     {name}
                                 </Typography>
                                 <Typography fontSize={16} color="#808191">
-                                    Contributor
+                                    Realestate Agent
                                 </Typography>
                             </Stack>
 
                             <Stack direction="column" gap="30px">
-                                {/* <Stack gap="15px">
+                                <Stack gap="15px">
                                     <Typography
                                         fontSize={14}
                                         fontWeight={500}
@@ -100,7 +100,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                             Kentucky 39495
                                         </Typography>
                                     </Box>
-                                </Stack> */}
+                                </Stack>
 
                                 <Stack
                                     direction="row"
@@ -108,7 +108,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                     gap="20px"
                                     pb={4}
                                 >
-                                    {/* <Stack flex={1} gap="15px">
+                                    <Stack flex={1} gap="15px">
                                         <Typography
                                             fontSize={14}
                                             fontWeight={500}
@@ -131,7 +131,7 @@ const Profile = ({ type, name, avatar, email, properties }: ProfileProps) => (
                                                 +0123 456 7890
                                             </Typography>
                                         </Box>
-                                    </Stack> */}
+                                    </Stack>
 
                                     <Stack flex={1} gap="15px">
                                         <Typography

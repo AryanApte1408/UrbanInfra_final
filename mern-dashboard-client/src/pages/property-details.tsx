@@ -7,15 +7,18 @@ import {
     Edit,
     Phone,
     Place,
+    Star,
 } from "@mui/icons-material";
 
 import { CustomButton } from "components";
+
 
 function checkImage(url: any) {
     const img = new Image();
     img.src = url;
     return img.width !== 0 && img.height !== 0;
 }
+
 
 const PropertyDetails = () => {
     const navigate = useNavigate();
@@ -29,6 +32,83 @@ const PropertyDetails = () => {
     const { data, isLoading, isError } = queryResult;
 
     const propertyDetails = data?.data ?? {};
+
+
+    const handleImageProcessing = async () => {
+        const formData = new FormData();
+        console.log(propertyDetails.photo.toString());
+        const image_url = propertyDetails.photo
+        formData.append('image', image_url);
+
+        try {
+        const response = await fetch('http://localhost:8000/process-image', {
+            method: 'POST',
+            body: formData,
+        });
+
+        if (response.ok) {
+            const result = await response.json();
+            console.log(result);
+        } else {
+            console.error('Image processing failed.');
+
+        }
+        } catch (error) {
+        console.error('Error:', error);
+        }
+        }
+
+//     const canvasRef = useRef(null);
+
+//     useEffect(() => {
+//     const loadOpenCv = async () => {
+//       try {
+//         await new Promise((resolve, reject) => {
+//           const script = document.createElement("script");
+//           script.src = "opencv.js";
+//           script.async = true;
+//           script.onload = resolve;
+//           script.onerror = reject;
+//           document.body.appendChild(script);
+//         });
+        
+//         // OpenCV.js is ready
+//         handleImageProcessing();
+//       } catch (error) {
+//         console.error("Failed to load OpenCV.js:", error);
+//       }
+//     };
+
+//     loadOpenCv();
+//   }, []);
+
+//   const handleImageProcessing = () => {
+//     const canvas = canvasRef.current;
+//     const ctx = canvas.getContext("2d");
+//     const img = new Image();
+//     img.src = "path/to/your/image.jpg";
+//     img.onload = () => {
+//       ctx.drawImage(img, 0, 0);
+//       const mat = cv.imread(canvas);
+//       const grayMat = new cv.Mat();
+//       cv.cvtColor(mat, grayMat, cv.COLOR_BGR2GRAY);
+//       const contours = new cv.MatVector();
+//       const hierarchy = new cv.Mat();
+//       cv.findContours(
+//         grayMat,
+//         contours,
+//         hierarchy,
+//         cv.RETR_EXTERNAL,
+//         cv.CHAIN_APPROX_SIMPLE
+//       );
+//       console.log("Number of buildings:", contours.size());
+//       mat.delete();
+//       grayMat.delete();
+//       contours.delete();
+//       hierarchy.delete();
+//     };
+//   };
+
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -84,7 +164,19 @@ const PropertyDetails = () => {
                         style={{ objectFit: "cover", borderRadius: "10px" }}
                         className="property_details-img"
                     />
-
+    	            {/* <Box>
+                        <canvas ref={canvasRef} width={800} height={600} />
+                    </Box> */}
+                    <Box>
+                        <CustomButton
+                            title="Analyse"
+                            backgroundColor="#475BE8"
+                            color="#FCFCFC"
+                            fullWidth
+                            handleClick={handleImageProcessing}
+                        />
+                    </Box>
+                    
                     <Box mt="15px">
                         <Stack
                             direction="row"
@@ -100,6 +192,14 @@ const PropertyDetails = () => {
                             >
                                 {/* {propertyDetails.propertyType} */}
                             </Typography>
+                            <Box>
+                                {[1, 2, 3, 4, 5].map((item) => (
+                                    <Star
+                                        key={`star-${item}`}
+                                        sx={{ color: "#F2C94C" }}
+                                    />
+                                ))}
+                            </Box>
                         </Stack>
 
                         <Stack
@@ -157,7 +257,7 @@ const PropertyDetails = () => {
                                         color="#808191"
                                         mb={0.5}
                                     >
-                                        
+                                        for one day
                                     </Typography>
                                 </Stack>
                             </Box>
@@ -226,7 +326,7 @@ const PropertyDetails = () => {
                                     fontWeight={400}
                                     color="#808191"
                                 >
-                                    Contributor
+                                    Agent
                                 </Typography>
                             </Box>
 
@@ -236,14 +336,14 @@ const PropertyDetails = () => {
                                 alignItems="center"
                                 gap={1}
                             >
-                                {/* <Place sx={{ color: "#808191" }} /> */}
-                                {/* <Typography
+                                <Place sx={{ color: "#808191" }} />
+                                <Typography
                                     fontSize={14}
                                     fontWeight={400}
                                     color="#808191"
                                 >
                                     North Carolina, USA
-                                </Typography> */}
+                                </Typography>
                             </Stack>
 
                             <Typography
@@ -264,7 +364,7 @@ const PropertyDetails = () => {
                             flexWrap="wrap"
                             gap={2}
                         >
-                            {/* <CustomButton
+                            <CustomButton
                                 title={!isCurrentUser ? "Message" : "Edit"}
                                 backgroundColor="#475BE8"
                                 color="#FCFCFC"
@@ -279,8 +379,8 @@ const PropertyDetails = () => {
                                         );
                                     }
                                 }}
-                            /> */}
-                            {/* <CustomButton
+                            />
+                            <CustomButton
                                 title={!isCurrentUser ? "Call" : "Delete"}
                                 backgroundColor={
                                     !isCurrentUser ? "#2ED480" : "#d42e2e"
@@ -291,26 +391,26 @@ const PropertyDetails = () => {
                                 handleClick={() => {
                                     if (isCurrentUser) handleDeleteProperty();
                                 }}
-                            /> */}
+                            />
                         </Stack>
                     </Stack>
 
                     <Stack>
-                        {/* <img
+                        <img
                             src="https://serpmedia.org/scigen/images/googlemaps-nyc-standard.png?crc=3787557525"
                             width="100%"
                             height={306}
                             style={{ borderRadius: 10, objectFit: "cover" }}
-                        /> */}
+                        />
                     </Stack>
 
                     <Box>
-                        {/* <CustomButton
+                        <CustomButton
                             title="Book Now"
                             backgroundColor="#475BE8"
                             color="#FCFCFC"
                             fullWidth
-                        /> */}
+                        />
                     </Box>
                 </Box>
             </Box>

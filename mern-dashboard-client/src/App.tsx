@@ -31,7 +31,7 @@ import { parseJwt } from "utils/parse-jwt";
 import {
     Login,
     Home,
-    Contributors,
+    Agents,
     MyProfile,
     PropertyDetails,
     AllProperties,
@@ -127,7 +127,7 @@ function App() {
 
     return (
         <ColorModeContextProvider>
-            
+            <GitHubBanner />
             <CssBaseline />
             <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
             <RefineSnackbarProvider>
@@ -146,21 +146,21 @@ function App() {
                             icon: <VillaOutlined />,
                         },
                         {
-                            name: "Contributors",
-                            list: Contributors,
+                            name: "agents",
+                            list: Agents,
                             show: AgentProfile,
                             icon: <PeopleAltOutlined />,
                         },
-                        // {
-                        //     name: "reviews",
-                        //     list: Home,
-                        //     icon: <StarOutlineRounded />,
-                        // },
-                        // {
-                        //     name: "messages",
-                        //     list: Home,
-                        //     icon: <ChatBubbleOutline />,
-                        // },
+                        {
+                            name: "reviews",
+                            list: Home,
+                            icon: <StarOutlineRounded />,
+                        },
+                        {
+                            name: "messages",
+                            list: Home,
+                            icon: <ChatBubbleOutline />,
+                        },
                         {
                             name: "my-profile",
                             options: { label: "My Profile " },

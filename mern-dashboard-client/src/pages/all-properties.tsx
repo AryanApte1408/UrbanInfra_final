@@ -61,7 +61,7 @@ const AllProperties = () => {
                     <Typography fontSize={25} fontWeight={700} color="#11142d">
                         {!allProperties.length
                             ? "There are no properties"
-                            : "Areas Scanned"}
+                            : "All Properties"}
                     </Typography>
                     <Box
                         mb={2}
@@ -78,7 +78,7 @@ const AllProperties = () => {
                             mb={{ xs: "20px", sm: 0 }}
                         >
                             <CustomButton
-                                title={`Sort by buildings ${
+                                title={`Sort price ${
                                     currentPrice === "asc" ? "↑" : "↓"
                                 }`}
                                 handleClick={() => toggleSort("price")}
@@ -125,14 +125,14 @@ const AllProperties = () => {
                             >
                                 <MenuItem value="">All</MenuItem>
                                 {[
-                                    "Area",
-                                    // "Villa",
-                                    // "Farmhouse",
-                                    // "Condos",
-                                    // "Townhouse",
-                                    // "Duplex",
-                                    // "Studio",
-                                    // "Chalet",
+                                    "Apartment",
+                                    "Villa",
+                                    "Farmhouse",
+                                    "Condos",
+                                    "Townhouse",
+                                    "Duplex",
+                                    "Studio",
+                                    "Chalet",
                                 ].map((type) => (
                                     <MenuItem
                                         key={type}
@@ -153,7 +153,7 @@ const AllProperties = () => {
                 alignItems="center"
             >
                 <CustomButton
-                    title="Add Area"
+                    title="Add Property"
                     handleClick={() => navigate("/properties/create")}
                     backgroundColor="#475be8"
                     color="#fcfcfc"
