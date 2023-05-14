@@ -98,7 +98,7 @@ const PropertyDetails = () => {
                                 color="#11142D"
                                 textTransform="capitalize"
                             >
-                                {propertyDetails.propertyType}
+                                {/* {propertyDetails.propertyType} */}
                             </Typography>
                         </Stack>
 
