@@ -26,7 +26,7 @@ const Form = ({
     return (
         <Box>
             <Typography fontSize={25} fontWeight={700} color="#11142d">
-                {type} an Area
+                {type} a Property
             </Typography>
 
             <Box mt={2.5} borderRadius="15px" padding="20px" bgcolor="#fcfcfc">
@@ -49,7 +49,7 @@ const Form = ({
                                 color: "#11142d",
                             }}
                         >
-                            Enter area name
+                            Enter property name
                         </FormHelperText>
                         <TextField
                             fullWidth
@@ -90,7 +90,7 @@ const Form = ({
                     </FormControl>
 
                     <Stack direction="row" gap={4}>
-                        {/* <FormControl sx={{ flex: 1 }}>
+                        <FormControl sx={{ flex: 1 }}>
                             <FormHelperText
                                 sx={{
                                     fontWeight: 500,
@@ -109,10 +109,10 @@ const Form = ({
                                 inputProps={{ "aria-label": "Without label" }}
                                 defaultValue="apartment"
                                 {...register("propertyType", {
-                                    required: false,
+                                    required: true,
                                 })}
                             >
-                                <MenuItem value="area">Area</MenuItem>
+                                <MenuItem value="apartment">Apartment</MenuItem>
                                 <MenuItem value="villa">Villa</MenuItem>
                                 <MenuItem value="farmhouse">farmhouse</MenuItem>
                                 <MenuItem value="condos">Condos</MenuItem>
@@ -121,7 +121,7 @@ const Form = ({
                                 <MenuItem value="studio">Studio</MenuItem>
                                 <MenuItem value="chalet">Chalet</MenuItem>
                             </Select>
-                        </FormControl> */}
+                        </FormControl>
                         <FormControl>
                             <FormHelperText
                                 sx={{
@@ -131,7 +131,7 @@ const Form = ({
                                     color: "#11142d",
                                 }}
                             >
-                                Enter estimated buildings
+                                Enter property price
                             </FormHelperText>
                             <TextField
                                 fullWidth
@@ -140,7 +140,7 @@ const Form = ({
                                 color="info"
                                 type="number"
                                 variant="outlined"
-                                {...register("price", { required: false })}
+                                {...register("price", { required: true })}
                             />
                         </FormControl>
                     </Stack>
@@ -162,7 +162,7 @@ const Form = ({
                             id="outlined-basic"
                             color="info"
                             variant="outlined"
-                            {...register("location", { required: false })}
+                            {...register("location", { required: true })}
                         />
                     </FormControl>
 
@@ -179,7 +179,7 @@ const Form = ({
                                 fontWeight={500}
                                 my="10px"
                             >
-                                Area Photo
+                                Property Photo
                             </Typography>
 
                             <Button

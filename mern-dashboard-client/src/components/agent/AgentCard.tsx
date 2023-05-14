@@ -39,7 +39,7 @@ const AgentCard = ({
     const generateLink = () => {
         if (currentUser.email === email) return "/my-profile";
 
-        return `/Contributors/show/${id}`;
+        return `/agents/show/${id}`;
     };
 
     return (
@@ -84,7 +84,7 @@ const AgentCard = ({
                         {name}
                     </Typography>
                     <Typography fontSize={14} color="#808191">
-                        Contributor
+                        Real-Estate Agent
                     </Typography>
                 </Stack>
                 <Stack
@@ -98,18 +98,18 @@ const AgentCard = ({
                         icon={<EmailOutlined sx={{ color: "#808191" }} />}
                         name={email}
                     />
-                    {/* <InfoBar
+                    <InfoBar
                         icon={<Place sx={{ color: "#808191" }} />}
                         name="London"
-                    /> */}
-                    {/* <InfoBar
+                    />
+                    <InfoBar
                         icon={<Phone sx={{ color: "#808191" }} />}
                         name="+502-3231-4141"
-                    /> */}
-                    {/* <InfoBar
+                    />
+                    <InfoBar
                         icon={<LocationCity sx={{ color: "#808191" }} />}
                         name={`${noOfProperties} Properties`}
-                    /> */}
+                    />
                 </Stack>
             </Stack>
         </Box>
