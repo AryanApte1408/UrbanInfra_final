@@ -192,14 +192,14 @@ const PropertyDetails = () => {
                             >
                                 {/* {propertyDetails.propertyType} */}
                             </Typography>
-                            <Box>
+                            {/* <Box>
                                 {[1, 2, 3, 4, 5].map((item) => (
                                     <Star
                                         key={`star-${item}`}
                                         sx={{ color: "#F2C94C" }}
                                     />
                                 ))}
-                            </Box>
+                            </Box> */}
                         </Stack>
 
                         <Stack
@@ -238,7 +238,7 @@ const PropertyDetails = () => {
                                     mt="10px"
                                     color="#11142D"
                                 >
-                                    Price
+                                    Buildings
                                 </Typography>
                                 <Stack
                                     direction="row"

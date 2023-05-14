@@ -73,9 +73,9 @@ const PropertyCard = ({
                     bgcolor="#dadefa"
                     height="fit-content"
                 >
-                    <Typography fontSize={12} fontWeight={600} color="#475be8">
-                        ${price}
-                    </Typography>
+                    {/* <Typography fontSize={12} fontWeight={600} color="#475be8">
+                        {price}
+                    </Typography> */}
                 </Box>
             </CardContent>
         </Card>
