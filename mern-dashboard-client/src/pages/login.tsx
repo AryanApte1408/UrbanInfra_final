@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import { useLogin } from "@refinedev/core";
 import { Container, Box, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import LoginPage from "./login-with-id";
+import Register from "./register-with-id";
 
 
 import { yariga } from "../assets";
@@ -33,16 +35,29 @@ export const Login: React.FC = () => {
         );
     };
 
-    interface registerbuttonProps {
-    onClick: () => void;
-    }
+    // interface registerbuttonProps {
+    // onClick: () => void;
+    // }
     
-    const RegiserButton: React.FC<registerbuttonProps> = ({ onClick }) => {
-    return (
-        <button onClick={onClick}>
-        Register using ID and Password
-        </button>
-    );
+    // const RegiserButton: React.FC<registerbuttonProps> = ({ onClick }) => {
+    // return (
+    //     <button onClick={onClick}>
+    //     Register using ID and Password
+    //     </button>
+    // );
+    // };
+    const Registerbutton = (): JSX.Element => {
+        const navigate = useNavigate();
+      
+        const handleClick = () => {
+          navigate("/Register"); // Update with your login page URL
+        };
+      
+        return (
+          <Button variant="contained" color="success" onClick={handleClick}>
+            Register
+          </Button>
+        );
     };
 
     const GoogleButton = (): JSX.Element => {
@@ -113,9 +128,7 @@ export const Login: React.FC = () => {
                     </Box>
 
                     <Box mt ={4}>
-                        <RegiserButton onClick={function (): void {
-                            throw new Error("Function not implemented.");
-                        } }/>
+                        <Registerbutton/>
                     </Box>
                 </Box>
             </Container>
