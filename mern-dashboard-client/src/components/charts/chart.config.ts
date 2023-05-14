@@ -1,14 +1,14 @@
 import { ApexOptions } from "apexcharts";
 
 export const TotalRevenueSeries = [
-    // {
-    //     name: "Last Month",
-    //     data: [183, 124, 115, 85, 143],
-    // },
     {
-        name: "This Month",
-        data: [95, 84, 72, 44, 108],
+        name: "This month",
+        data: [183, 124, 115, 85, 143],
     },
+    // {
+    //     name: "Running Month",
+    //     data: [95, 84, 72, 44, 108],
+    // },
 ];
 
 export const TotalRevenueOptions: ApexOptions = {
@@ -37,7 +37,7 @@ export const TotalRevenueOptions: ApexOptions = {
         width: 4,
     },
     xaxis: {
-        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+        categories: ["Jan", "Feb", "Mar", "Apr", "May"],
     },
     yaxis: {
         title: {
@@ -54,7 +54,7 @@ export const TotalRevenueOptions: ApexOptions = {
     // tooltip: {
     //     y: {
     //         formatter(val: number) {
-    //             return ` {val} `;
+    //             return `$ ${val} thousands`;
     //         },
     //     },
     // },

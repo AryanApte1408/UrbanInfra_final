@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import { useLogin } from "@refinedev/core";
-import { Container, Box } from "@mui/material";
+import { Container, Box, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import LoginPage from "./login-with-id";
+import Register from "./register-with-id";
 
 
 import { yariga } from "../assets";
@@ -14,6 +17,48 @@ export const Login: React.FC = () => {
     const { mutate: login } = useLogin<CredentialResponse>({
         v3LegacyAuthProviderCompatible: true,
     });
+
+
+
+
+    const LoginButton = (): JSX.Element => {
+        const navigate = useNavigate();
+      
+        const handleClick = () => {
+          navigate("/LoginPage"); // Update with your login page URL
+        };
+      
+        return (
+          <Button variant="contained" color="primary" onClick={handleClick}>
+            Login
+          </Button>
+        );
+    };
+
+    // interface registerbuttonProps {
+    // onClick: () => void;
+    // }
+    
+    // const RegiserButton: React.FC<registerbuttonProps> = ({ onClick }) => {
+    // return (
+    //     <button onClick={onClick}>
+    //     Register using ID and Password
+    //     </button>
+    // );
+    // };
+    const Registerbutton = (): JSX.Element => {
+        const navigate = useNavigate();
+      
+        const handleClick = () => {
+          navigate("/Register"); // Update with your login page URL
+        };
+      
+        return (
+          <Button variant="contained" color="success" onClick={handleClick}>
+            Register
+          </Button>
+        );
+    };
 
     const GoogleButton = (): JSX.Element => {
         const divRef = useRef<HTMLDivElement>(null);
@@ -76,6 +121,14 @@ export const Login: React.FC = () => {
                     </div>
                     <Box mt={4}>
                         <GoogleButton />
+                    </Box>
+
+                    <Box mt ={4}>
+                        <LoginButton/>
+                    </Box>
+
+                    <Box mt ={4}>
+                        <Registerbutton/>
                     </Box>
                 </Box>
             </Container>

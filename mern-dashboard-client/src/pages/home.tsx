@@ -3,7 +3,7 @@ import { Typography, Box, Stack } from "@mui/material";
 
 import {
     PieChart,
-    PropertyReferrals,
+    // PropertyReferrals,
     TotalRevenue,
     PropertyCard,
 } from "components";
@@ -31,9 +31,9 @@ const Home = () => {
 
             <Box mt="20px" display="flex" flexWrap="wrap" gap={4}>
                 <PieChart
-                    title="Properties for Sale"
-                    value={684}
-                    series={[75, 25]}
+                    title="Images scanned this month"
+                    value={6}
+                    series={[1, 6]}
                     colors={["#275be8", "#c4e8ef"]}
                 />
                 <PieChart
@@ -42,18 +42,18 @@ const Home = () => {
                     series={[1, 6]}
                     colors={["#275be8", "#c4e8ef"]}
                 />
-                <PieChart
-                    title="Total customers"
+                {/* <PieChart
+                    title="Total Buildings"
                     value={5684}
                     series={[75, 25]}
                     colors={["#275be8", "#c4e8ef"]}
-                />
-                <PieChart
+                /> */}
+                {/* <PieChart
                     title="Properties for Cities"
                     value={555}
                     series={[75, 25]}
                     colors={["#275be8", "#c4e8ef"]}
-                />
+                /> */}
             </Box>
 
             <Stack
@@ -63,7 +63,7 @@ const Home = () => {
                 gap={4}
             >
                 <TotalRevenue />
-                <PropertyReferrals />
+                {/* <PropertyReferrals /> */}
             </Stack>
 
             <Box
@@ -77,7 +77,7 @@ const Home = () => {
                 mt="25px"
             >
                 <Typography fontSize="18px" fontWeight={600} color="#11142d">
-                    Latest Properties
+                    Latest Areas
                 </Typography>
 
                 <Box
