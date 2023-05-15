@@ -32,8 +32,8 @@ const Home = () => {
             <Box mt="20px" display="flex" flexWrap="wrap" gap={4}>
                 <PieChart
                     title="Total images scanned"
-                    value={8}
-                    series={[1, 7]}
+                    value={9}
+                    series={[2, 7]}
                     colors={["#275be8", "#c4e8ef"]}
                 />
                 <PieChart

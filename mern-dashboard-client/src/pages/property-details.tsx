@@ -168,13 +168,13 @@ const PropertyDetails = () => {
                         <canvas ref={canvasRef} width={800} height={600} />
                     </Box> */}
                     <Box>
-                        {/* <CustomButton
+                        <CustomButton
                             title="Analyse"
                             backgroundColor="#475BE8"
                             color="#FCFCFC"
                             fullWidth
                             handleClick={handleImageProcessing}
-                        /> */}
+                        />
                     </Box>
                     
                     <Box mt="15px">
@@ -232,14 +232,14 @@ const PropertyDetails = () => {
                             </Box>
 
                             <Box>
-                                <Typography
+                                {/* <Typography
                                     fontSize={16}
                                     fontWeight={600}
                                     mt="10px"
                                     color="#11142D"
                                 >
                                     Buildings
-                                </Typography>
+                                </Typography> */}
                                 <Stack
                                     direction="row"
                                     alignItems="flex-end"
@@ -250,7 +250,7 @@ const PropertyDetails = () => {
                                         fontWeight={700}
                                         color="#475BE8"
                                     >
-                                        {propertyDetails.buildings}
+                                        {/* {propertyDetails.buildings} */}
                                     </Typography>
                                     <Typography
                                         fontSize={14}
