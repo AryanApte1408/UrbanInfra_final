@@ -3,7 +3,7 @@ import { ApexOptions } from "apexcharts";
 export const TotalRevenueSeries = [
     {
         name: "This month",
-        data: [183, 124, 115, 85, 143],
+        data: [0, 110, 115, 100, 128],
     },
     // {
     //     name: "Running Month",

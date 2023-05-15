@@ -31,15 +31,15 @@ const Home = () => {
 
             <Box mt="20px" display="flex" flexWrap="wrap" gap={4}>
                 <PieChart
-                    title="Images scanned this month"
-                    value={6}
-                    series={[1, 6]}
+                    title="Total images scanned"
+                    value={8}
+                    series={[1, 7]}
                     colors={["#275be8", "#c4e8ef"]}
                 />
                 <PieChart
-                    title="Images scanned by user"
-                    value={6}
-                    series={[1, 6]}
+                    title="Images scanned this month"
+                    value={4}
+                    series={[1, 3]}
                     colors={["#275be8", "#c4e8ef"]}
                 />
                 {/* <PieChart
