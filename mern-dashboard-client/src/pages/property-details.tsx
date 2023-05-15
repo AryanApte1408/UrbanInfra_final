@@ -364,7 +364,7 @@ const PropertyDetails = () => {
                             flexWrap="wrap"
                             gap={2}
                         >
-                            {/* <CustomButton
+                            <CustomButton
                                 title={!isCurrentUser ? "Message" : "Edit"}
                                 backgroundColor="#475BE8"
                                 color="#FCFCFC"
@@ -379,8 +379,8 @@ const PropertyDetails = () => {
                                         );
                                     }
                                 }}
-                            /> */}
-                            {/* <CustomButton
+                            />
+                            <CustomButton
                                 title={!isCurrentUser ? "Call" : "Delete"}
                                 backgroundColor={
                                     !isCurrentUser ? "#2ED480" : "#d42e2e"
@@ -391,7 +391,7 @@ const PropertyDetails = () => {
                                 handleClick={() => {
                                     if (isCurrentUser) handleDeleteProperty();
                                 }}
-                            /> */}
+                            />
                         </Stack>
                     </Stack>
 
