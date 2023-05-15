@@ -31,7 +31,7 @@ const AllProperties = () => {
     const allProperties = data?.data ?? [];
     console.log(allProperties)
 
-    const currentPrice = sorter.find((item) => item.field === "price")?.order;
+    const currentPrice = sorter.find((item) => item.field === "buildings")?.order;
 
     const toggleSort = (field: string) => {
         setSorter([{ field, order: currentPrice === "asc" ? "desc" : "asc" }]);
@@ -46,8 +46,8 @@ const AllProperties = () => {
             title:
                 logicalFilters.find((item) => item.field === "title")?.value ||
                 "",
-            propertyType:
-                logicalFilters.find((item) => item.field === "propertyType")
+            imageType:
+                logicalFilters.find((item) => item.field === "imageType")
                     ?.value || "",
         };
     }, [filters]);
@@ -82,7 +82,7 @@ const AllProperties = () => {
                                 title={`Sort by buildings ${
                                     currentPrice === "asc" ? "↑" : "↓"
                                 }`}
-                                handleClick={() => toggleSort("price")}
+                                handleClick={() => toggleSort("buildings")}
                                 backgroundColor="#475be8"
                                 color="#fcfcfc"
                             />
@@ -110,12 +110,12 @@ const AllProperties = () => {
                                 required
                                 inputProps={{ "aria-label": "Without label" }}
                                 defaultValue=""
-                                value={currentFilterValues.propertyType}
+                                value={currentFilterValues.imageType}
                                 onChange={(e) => {
                                     setFilters(
                                         [
                                             {
-                                                field: "propertyType",
+                                                field: "imageType",
                                                 operator: "eq",
                                                 value: e.target.value,
                                             },
@@ -169,7 +169,7 @@ const AllProperties = () => {
                         id={property._id}
                         title={property.title}
                         location={property.location}
-                        price={property.price}
+                        buildings={property.buildings}
                         photo={property.photo}
                     />
                 ))}

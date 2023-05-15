@@ -20,13 +20,13 @@ const getAllProperties = async (req, res) => {
         _start,
         _sort,
         title_like = "",
-        propertyType = "",
+        imageType = "",
     } = req.query;
 
     const query = {};
 
-    if (propertyType !== "") {
-        query.propertyType = propertyType;
+    if (imageType !== "") {
+        query.imageType = imageType;
     }
 
     if (title_like) {
@@ -68,9 +68,9 @@ const createProperty = async (req, res) => {
         const {
             title,
             description,
-            propertyType,
+            imageType,
             location,
-            price,
+            buildings,
             photo,
             email,
         } = req.body;
@@ -87,9 +87,9 @@ const createProperty = async (req, res) => {
         const newProperty = await Property.create({
             title,
             description,
-            propertyType,
+            imageType,
             location,
-            price,
+            buildings,
             photo: photoUrl.url,
             creator: user._id, // makin a connection to user from the user schema
         });
@@ -108,7 +108,7 @@ const createProperty = async (req, res) => {
 const updateProperty = async (req, res) => {
     try {
         const { id } = req.params;
-        const { title, description, propertyType, location, price, photo } =
+        const { title, description, imageType, location, buildings, photo } =
             req.body;
 
         const photoUrl = await cloudinary.uploader.upload(photo);
@@ -118,9 +118,9 @@ const updateProperty = async (req, res) => {
             {
                 title,
                 description,
-                propertyType,
+                imageType,
                 location,
-                price,
+                buildings,
                 photo: photoUrl.url || photo,
             },
         );

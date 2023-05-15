@@ -26,7 +26,7 @@ const Form = ({
     return (
         <Box>
             <Typography fontSize={25} fontWeight={700} color="#11142d">
-                {type} an Area
+                {type}  an Area
             </Typography>
 
             <Box mt={2.5} borderRadius="15px" padding="20px" bgcolor="#fcfcfc">
@@ -85,12 +85,12 @@ const Form = ({
                                 padding: 10,
                                 color: "#919191",
                             }}
-                            {...register("description", { required: true })}
+                            {...register("description", { required: false })}
                         />
                     </FormControl>
 
                     <Stack direction="row" gap={4}>
-                        {/* <FormControl sx={{ flex: 1 }}>
+                        <FormControl sx={{ flex: 1 }}>
                             <FormHelperText
                                 sx={{
                                     fontWeight: 500,
@@ -99,7 +99,7 @@ const Form = ({
                                     color: "#11142d",
                                 }}
                             >
-                                Select Property Type
+                                Select Image Type
                             </FormHelperText>
                             <Select
                                 variant="outlined"
@@ -108,20 +108,20 @@ const Form = ({
                                 required
                                 inputProps={{ "aria-label": "Without label" }}
                                 defaultValue="apartment"
-                                {...register("propertyType", {
+                                {...register("imageType", {
                                     required: false,
                                 })}
                             >
-                                <MenuItem value="area">Area</MenuItem>
-                                <MenuItem value="villa">Villa</MenuItem>
-                                <MenuItem value="farmhouse">farmhouse</MenuItem>
-                                <MenuItem value="condos">Condos</MenuItem>
-                                <MenuItem value="townhouse">Townhouse</MenuItem>
-                                <MenuItem value="duplex">Duplex</MenuItem>
+                                <MenuItem value="Satelite Image">Satelite Image</MenuItem>
+                                <MenuItem value="Drone Images">Drone Images</MenuItem>
+                                <MenuItem value="Vertical Images">Vertical Images</MenuItem>
+                                <MenuItem value="Lidar Images">Lidar Images</MenuItem>
+                                {/* <MenuItem value="Hyperspectral Images">Hyperspectral Images</MenuItem> */}
+                                {/* <MenuItem value="duplex">Duplex</MenuItem>
                                 <MenuItem value="studio">Studio</MenuItem>
-                                <MenuItem value="chalet">Chalet</MenuItem>
+                                <MenuItem value="chalet">Chalet</MenuItem> */}
                             </Select>
-                        </FormControl> */}
+                        </FormControl>
                         <FormControl>
                             <FormHelperText
                                 sx={{
@@ -140,7 +140,8 @@ const Form = ({
                                 color="info"
                                 type="number"
                                 variant="outlined"
-                                {...register("price", { required: false })}
+                                defaultValue="10" // Set the fixed value here
+                                {...register("buildings", { required: false })}
                             />
                         </FormControl>
                     </Stack>

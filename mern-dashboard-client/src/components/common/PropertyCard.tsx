@@ -15,7 +15,7 @@ const PropertyCard = ({
     id,
     title,
     location,
-    price,
+    buildings,
     photo,
 }: PropertyCardProps) => {
     return (
@@ -74,7 +74,7 @@ const PropertyCard = ({
                     height="fit-content"
                 >
                     {/* <Typography fontSize={12} fontWeight={600} color="#475be8">
-                        {price}
+                        {buildings}
                     </Typography> */}
                 </Box>
             </CardContent>

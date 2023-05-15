@@ -190,7 +190,7 @@ const PropertyDetails = () => {
                                 color="#11142D"
                                 textTransform="capitalize"
                             >
-                                {/* {propertyDetails.propertyType} */}
+                                {/* {propertyDetails.imageType} */}
                             </Typography>
                             {/* <Box>
                                 {[1, 2, 3, 4, 5].map((item) => (
@@ -250,7 +250,7 @@ const PropertyDetails = () => {
                                         fontWeight={700}
                                         color="#475BE8"
                                     >
-                                        {propertyDetails.price}
+                                        {propertyDetails.buildings}
                                     </Typography>
                                     <Typography
                                         fontSize={14}

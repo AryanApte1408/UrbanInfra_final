@@ -90,7 +90,7 @@ const Home = () => {
                             id={property._id}
                             title={property.title}
                             location={property.location}
-                            price={property.price}
+                            buildings={property.buildings}
                             photo={property.photo}
                         />
                     ))}
